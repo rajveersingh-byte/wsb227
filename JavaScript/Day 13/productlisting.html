@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productlisting.html">Product</a></li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="catalog-container">
+        <aside class="sidebar">
+            <h2>Filter</h2>
+            <h3>Categories</h3>
+            <div id="categories-list" class="filter-box">
+
+            </div>
+
+            <div class="filter-box">
+                <h3>Price</h3>
+                <label><input type="checkbox"> $50 - $100</label>
+                <label><input type="checkbox"> $100 - $200</label>
+                <label><input type="checkbox"> $200 - $300</label>
+            </div>
+
+            <div class="filter-box">
+                <h3>Size</h3>
+                <label><input type="checkbox"> S</label>
+                <label><input type="checkbox"> M</label>
+                <label><input type="checkbox"> L</label>
+                <label><input type="checkbox"> XL</label>
+            </div>
+        </aside>
+
+        <section class="products-area">
+            <div class="product-header">
+                <h1>Products</h1>
+                <select>
+                    <option>Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+
+            <div id="content" class="products-row">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        @ <span id="year"></span> WsCube tech
+    </footer>
+</body>
+<script src="main.js"></script>
+
+</html>

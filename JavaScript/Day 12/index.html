@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmos | Weather, clearly</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="shell">
+
+        <header>
+            <div class="brand">
+                <div class="brand-mark"><span></span></div>atmos
+            </div>
+            <nav><a href="#today">Today</a><a href="#forecast">Forecast</a><a href="#saved">Saved places</a><button
+                    class="profile" aria-label="Open profile">JD</button></nav>
+        </header>
+
+        <section class="hero" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow">A clearer look outside</p>
+                <h1 id="page-title">Weather,<br><em>without</em> the noise.</h1>
+                <p class="sub">A quiet, considered forecast for wherever the day takes you. Updated every 15 minutes.
+                </p>
+            </div>
+            <form class="search" id="search-form" onsubmit="GetApi(event)">
+                <span class="search-icon">⌕</span>
+                <input id="cityinput" name="city" aria-label="Search city" placeholder="Search another city"
+                    autocomplete="off">
+                <button type="submit">GO</button>
+            </form>
+        </section>
+
+        <section id="today" aria-labelledby="city-name">
+            <div class="location">
+                <div>
+                    <h2 id="city-name"></h2><span id="status">Local time 14:32</span>
+                </div><span>● LIVE</span>
+            </div>
+            <article class="main-card">
+                <div class="current"><span class="date" id="date">Wednesday, August 26</span>
+                    <div class="temperature"><strong id="temp">18</strong><sup id="unit">°C</sup></div>
+                    <div class="conditions"><span class="sun"></span><span id="conditions">Mostly sunny</span></div>
+                </div>
+                <div class="stats">
+                    <div class="stat"><label>Feels like</label><b id="feels-like">17°</b></div>
+                    <div class="stat"><label>Wind</label><b id="wind">12 km/h NW</b></div>
+                    <div class="stat"><label>Humidity</label><b id="humidity">64%</b></div>
+                    <div class="stat"><label>Visibility</label><b id="visibility">18 km</b></div>
+                </div>
+            </article>
+        </section>
+
+
+        <div class="footer-note"><span>Atmospheric data, thoughtfully arranged</span><span>Source: Local stations +
+                satellite</span></div>
+    </main>
+</body>
+
+<script>
+
+    let GetApi = async (e) => {
+
+        try {
+            e.preventDefault();
+
+            let token = '4d8fb5b93d4af21d66a2948710284366';
+
+            let cityName = document.getElementById('cityinput').value.trim();
+
+            let GetCity = cityName || "Jaipur";
+
+            let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${GetCity}&appid=${token}&units=metric`);
+
+            let Data = await response.json();
+
+            let date = new Date(Data.dt * 1000);
+
+            let windDirection = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'][Math.round(Data.wind.deg / 45) % 8];
+
+            document.getElementById('city-name').textContent = `${Data.name}, ${Data.sys.country}`;
+            document.getElementById('status').textContent = `Local time ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+            document.getElementById('date').textContent = date.toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' });
+            document.getElementById('temp').textContent = Math.round(Data.main.temp);
+            document.getElementById('conditions').textContent = Data.weather[0].description;
+            document.getElementById('feels-like').textContent = `${Math.round(Data.main.feels_like)}°`;
+            document.getElementById('wind').textContent = `${Math.round(Data.wind.speed * 3.6)} km/h ${windDirection}`;
+            document.getElementById('humidity').textContent = `${Data.main.humidity}%`;
+            document.getElementById('visibility').textContent = `${(Data.visibility / 1000).toFixed(1)} km`;
+        }
+
+        catch (error) {
+            document.getElementById('status').textContent = error.message;
+        }
+
+
+    }
+
+</script>
+
+</html>

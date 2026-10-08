@@ -1,0 +1,243 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    width: 1170px;
+    border: 1px solid red;
+    margin: auto;
+    background: white;
+}
+
+.row1 {
+    background: rgb(48, 47, 47);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.row1>p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.row2 {
+    background-color: white;
+    display: flex;
+}
+
+
+.row2 .logo {
+    width: 25%;
+    border: 1px solid red;
+}
+
+.row2>.logo>img {
+    width: 80%;
+    padding-left: 50px;
+}
+
+.menu{
+    width: 75%;
+}
+
+.menu ul{
+    display: flex;
+    gap: 70px;
+    padding-left: 20px;
+    padding-top: 100px;
+}
+
+.menu ul li{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.middel-part{
+    background-color: white;
+    display: flex;
+    border: 20px solid #cccccc85;
+}
+
+.sidebar{
+    width: 25%;
+}
+
+.banner-section{
+    width: 70%;
+}
+
+
+
+.side-menu div{
+    background: #00a8ec;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 10px 20px;
+}
+
+.side-news{
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.head{
+    background-color: orange;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.side-news h3{
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.news-list ul li{
+    padding: 10px;
+}
+
+.list-courses{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.courses-side1 ul li, .courses-side2 ul li{
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.courses-side1 ul li:nth-child(1), .courses-side2 ul li:nth-child(4){
+    color: orange;
+}
+
+.courses-side1 ul li:nth-child(1) div, .courses-side2 ul li:nth-child(4) div{
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.courses-side1 ul li:nth-child(2), .courses-side2 ul li:nth-child(3){
+    color: blueviolet;
+}
+
+.courses-side1 ul li:nth-child(2) div, .courses-side2 ul li:nth-child(3) div{
+    width: 30px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+
+.courses-side1 ul li:nth-child(3), .courses-side2 ul li:nth-child(2){
+    color: #7bb1e0;
+}
+
+.courses-side1 ul li:nth-child(3) div, .courses-side2 ul li:nth-child(2) div{
+    width: 30px;
+    height: 30px;
+    background-color: #7bb1e0;
+    border-radius: 50%;
+}
+
+.courses-side1 ul li:nth-child(4), .courses-side2 ul li:nth-child(1){
+    color: green;
+}
+
+.courses-side1 ul li:nth-child(4) div, .courses-side2 ul li:nth-child(1) div{
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.work{
+    background-color: #cccccc85;
+}
+
+.work h3{
+    text-align: center;
+    font-size: 26px;
+    color: #00a8ec;
+    padding: 10px 0px;
+}
+
+.work-place{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-place div{
+    width: 270px;
+    height: 200px;
+    font-size: 24px;
+    font-weight: 600;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.work-place div:nth-child(1){
+    background-color: rgba(188, 72, 109, 0.8);
+
+    background-image: url(images/how/HOW-WE-WORK1.png);
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+}
+
+.work-place div:nth-child(2){
+    background-color: rgba(188, 72, 109, 0.8);
+
+    background-image: url(images/how/HOW-WE-WORK2.png);
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+}
+
+
+.work-place div:nth-child(3){
+    background-color: rgba(188, 72, 109, 0.8);
+
+    background-image: url(images/how/HOW-WE-WORK3.png);
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+}
+
+
+.work-place div:nth-child(4){
+    background-color: rgba(188, 72, 109, 0.8);
+
+    background-image: url(images/how/HOW-WE-WORK4.png);
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+}
+
+
+
+

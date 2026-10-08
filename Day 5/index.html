@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Form</title>
+</head>
+
+<body>
+
+    <div>
+        <h2>Contact Form</h2>
+        <form>
+            <div>
+                <label>Name <font color="red">*</font> </label>
+                <input type="text" value="Pooja" name="username" placeholder="Your Name" required/>
+            </div>
+            <br/>
+
+            <div>
+                <label>Email <font color="red">*</font></label>
+                <input type="email" name="email" placeholder="Your Email" required/>
+            </div>
+            <br/>
+            <div>
+                <label>Phone Number</label>
+                <input type="tel" name="number" minlength="1" maxlength="10" placeholder="+91 8529637410">
+            </div>
+
+            <br/>
+            <div>
+                <label>Gender</label>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                <input type="radio" name="gender"> Other
+            </div>
+
+            <br/>
+
+             <div>
+                <label>Hobbies</label>
+                <input type="checkbox" name="codeing"> Codeing
+                <input type="checkbox" name="playing"> Playing
+                <input type="checkbox" name="other"> Other
+            </div>
+
+            <br/>
+
+            <div>
+                <label>State</label>
+               <select name="state">
+                <option>--Select--</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="gujrat">Gujrat</option>
+                <option value="punjab">Punjab</option>
+               </select>
+            </div>
+
+            <br/>
+
+            <div>
+                <label>Massage</label>
+                <textarea name="massage"></textarea>
+            </div>
+
+            <br/>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+	color: #18352f;
+	background: #f8f7f3;
+	font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8f7f3;
+  color: #18352f;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button, a {
+  transition: all 180ms ease;
+}
+
+@media (max-width: 640px) {
+  .rpb-root {
+    gap: 0.35rem;
+    font-size: 0.8rem;
+  }
+
+  .rpb-item {
+    min-width: 2.1rem;
+    min-height: 2.1rem;
+    padding: 0 0.55rem;
+  }
+}

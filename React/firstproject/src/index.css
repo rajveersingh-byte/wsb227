@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.row{
+    align-items: center;
+}
+
+.hero-banner{
+    background: url('https://book-traker-nine.vercel.app/old-bookswebp.webp') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+

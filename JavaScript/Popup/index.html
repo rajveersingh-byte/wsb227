@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPUP</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .model {
+            width: 250px;
+            height: 250px;
+            box-shadow: 0px 0px 10px #ccc;
+            background: white;
+            padding: 25px;
+            position: fixed;
+            left: 40%;
+            top: 30%;
+            display: none;
+        }
+
+        .model-head {
+            position: relative;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 0.5px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            position: absolute;
+            right: 0px;
+            top: -15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="model" id="model">
+        <div class="model-head">
+            <div class="circle" id="closeModel">x</div>
+        </div>
+
+        <h2>Hello</h2>
+    </div>
+
+    <button id="btn">Opne Model</button>
+
+</body>
+
+<script>
+    let model = document.getElementById('model');
+
+    let openModel = document.getElementById('btn');
+    let closeModel = document.getElementById('closeModel');
+
+
+    openModel.onclick = () => {
+        model.style.display = "block"
+    }
+
+    closeModel.onclick = () => {
+        model.style.display = "none"
+    }
+
+    window.onclick = function (e) {
+        if (e.target !== openModel) {
+            model.style.display = "none";
+        }
+    }
+</script>
+
+</html>

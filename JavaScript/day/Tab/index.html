@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Tabs</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<main class="tabs-card">
+		<h1>Web development</h1>
+		<p class="subtitle">Choose a topic to explore</p>
+
+		<div class="tabs" role="tablist" aria-label="Web development topics">
+			<button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="html-panel" id="htmlbtn" data-tab="html-panel">HTML</button>
+			<button class="tab" type="button" role="tab" id="cssbtn" aria-selected="false" aria-controls="css-panel" data-tab="css-panel">CSS</button>
+			<button class="tab" type="button" role="tab" id="jsbtn" aria-selected="false" aria-controls="js-panel" data-tab="js-panel">JS</button>
+		</div>
+
+		<section class="tab-content" id="html-panel" role="tabpanel">
+			<span class="badge orange">01</span>
+			<h2>HTML builds the structure</h2>
+			<p>Use HTML to create the meaningful structure and content of every web page.</p>
+		</section>
+
+		<section class="tab-content" id="css-panel" role="tabpanel" hidden>
+			<span class="badge blue">02</span>
+			<h2>CSS brings it to life</h2>
+			<p>Use CSS to style your page with colors, spacing, layouts, and responsive design.</p>
+		</section>
+		
+		<section class="tab-content" id="js-panel" role="tabpanel" hidden>
+			<span class="badge purple">03</span>
+			<h2>JavaScript makes it interactive</h2>
+			<p>Use JavaScript to add behavior, interactions, and dynamic updates to your page.</p>
+		</section>
+
+		<img src="" id="slider" alt="">
+	</main>
+	<script src="main.js"></script>
+	
+	
+</body>
+</html>

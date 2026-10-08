@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-JavaScript</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .form {
+            max-width: 350px;
+            box-shadow: 0px 0px 10px #ccc;
+            padding: 15px;
+            margin: 50px auto 0px auto;
+            line-height: 50px;
+        }
+
+        .form div {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        select {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        button {
+            background: blue;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+
+
+        <h1>Cal.</h1>
+        <div>
+            <label>Value 1</label>
+            <input type="text" id="value1" />
+        </div>
+
+        <div>
+            <label>Value 2</label>
+            <input type="text" id="value2" />
+        </div>
+
+        <div>
+            <label>Opration</label>
+            <select id="opr">
+                <option>--Select--</option>
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+        </div>
+
+        <button onclick="cal()">Send</button>
+
+        <p id="output"> </p>
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>

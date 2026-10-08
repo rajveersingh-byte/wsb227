@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Offer | Luma</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="offer" aria-labelledby="offer-title">
+        <header class="offer__topbar">
+            <div class="brand"><span class="brand__mark" aria-hidden="true"></span> Luma Goods</div>
+            <div class="topbar__note">A little something for your everyday</div>
+        </header>
+
+        <section class="offer__content">
+            <div>
+                <p class="eyebrow">The weekend edit</p>
+                <h1 id="offer-title">Good things<br><span>take less.</span></h1>
+                <p class="description">A considered collection of daily essentials, made to bring a little more ease to
+                    the days that matter.</p>
+            </div>
+
+            <aside class="offer__deal" aria-label="Limited-time offer">
+                <p class="deal__label">Offer ends in</p>
+                <div class="timer" role="timer" aria-live="polite">
+                    <!-- <div class="time-box"><span class="time-box__value" id="days">00</span><span
+                            class="time-box__name">Days</span></div> -->
+                    <div class="time-box"><span class="time-box__value" id="hours">00</span><span
+                            class="time-box__name">Hours</span></div>
+                    <div class="time-box"><span class="time-box__value" id="minutes">00</span><span
+                            class="time-box__name">Minutes</span></div>
+                    <div class="time-box"><span class="time-box__value" id="seconds">00</span><span
+                            class="time-box__name">Seconds</span></div>
+                </div>
+                <div class="deal__rule"></div>
+                <div class="deal__footer">
+                    <p class="deal__price">20% <small>off everything</small></p>
+                    <button class="button" type="button" id="shop-button">Shop the offer</button>
+                </div>
+            </aside>
+        </section>
+
+        <footer class="offer__bottom">Free shipping on orders over $50 · Ends Sunday at midnight</footer>
+    </main>
+
+
+</body>
+
+<script>
+
+    let Coundown = () => {
+        let currentData = new Date();
+
+     
+        let expDate = new Date(2026, 8, 10);
+
+        let diffrence = expDate - currentData;
+
+        let hours = Math.floor(diffrence / (1000 * 60 * 60));
+
+        let minutes = Math.floor(
+            (diffrence % (1000 * 60 * 60)) / (1000 * 60)
+        );
+
+
+
+        let seconds = Math.floor(
+            (diffrence % (1000 * 60)) / 1000
+        );
+
+        document.getElementById('hours').innerHTML = hours;
+        document.getElementById('minutes').innerHTML = minutes;
+        document.getElementById('seconds').innerHTML = seconds;
+    }
+
+    setInterval(Coundown,1000)
+
+</script>
+
+</html>
